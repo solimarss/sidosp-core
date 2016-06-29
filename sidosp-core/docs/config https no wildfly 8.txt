@@ -10,6 +10,7 @@ keytool -genkey -alias localhost -keyalg RSA -keystore keystore.jks -keysize 409
 
 
 
+
 step2: Editing configuration/standalone.xml
 
  <management>

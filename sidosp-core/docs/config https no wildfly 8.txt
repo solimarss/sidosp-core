@@ -5,9 +5,9 @@ I have configured ssl for wildfly 8.2.0.
 step1: Creating keystore
 
 cd $WILDFLY_HOME/standalone/configuration
-keytool -genkey -alias localhost -keyalg RSA -keystore keystore.jks -keysize 4096
+keytool -genkey -alias localhost -keyalg RSA -keystore D:/certficado_sol.jks -keysize 4096
 
-
+senha: 302010
 
 
 

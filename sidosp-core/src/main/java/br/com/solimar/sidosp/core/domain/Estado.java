@@ -1,11 +1,13 @@
 package br.com.solimar.sidosp.core.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Estado implements Serializable {
@@ -17,6 +19,9 @@ public class Estado implements Serializable {
 
 	private String nome;
 	private String sigla;
+	
+	@OneToMany(mappedBy="estado")
+	private List<Doacao> doacoes;
 
 	public Long getId() {
 		return id;
@@ -40,6 +45,14 @@ public class Estado implements Serializable {
 
 	public void setSigla(String sigla) {
 		this.sigla = sigla;
+	}
+
+	public List<Doacao> getDoacoes() {
+		return doacoes;
+	}
+
+	public void setDoacoes(List<Doacao> doacoes) {
+		this.doacoes = doacoes;
 	}
 
 }

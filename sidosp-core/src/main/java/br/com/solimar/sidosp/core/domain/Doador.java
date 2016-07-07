@@ -1,12 +1,14 @@
 package br.com.solimar.sidosp.core.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -25,6 +27,9 @@ public class Doador implements Serializable{
 	
 	@Column
 	private String password;
+	
+	@OneToMany(mappedBy="doador")
+	private List<Doacao> doacoes;
 	
 
 	public Long getId() {
@@ -57,6 +62,14 @@ public class Doador implements Serializable{
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public List<Doacao> getDoacoes() {
+		return doacoes;
+	}
+
+	public void setDoacoes(List<Doacao> doacoes) {
+		this.doacoes = doacoes;
 	}
 
 	

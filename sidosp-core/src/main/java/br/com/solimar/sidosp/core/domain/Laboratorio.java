@@ -1,9 +1,12 @@
 package br.com.solimar.sidosp.core.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Laboratorio {
@@ -14,6 +17,9 @@ public class Laboratorio {
 	private Long id;
 
 	private String nome;
+	
+	@OneToMany(mappedBy="laboratorio")
+	private List<Doacao> doacoes;
 
 	public Long getId() {
 		return id;
@@ -29,6 +35,14 @@ public class Laboratorio {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public List<Doacao> getDoacoes() {
+		return doacoes;
+	}
+
+	public void setDoacoes(List<Doacao> doacoes) {
+		this.doacoes = doacoes;
 	}
 	
 	

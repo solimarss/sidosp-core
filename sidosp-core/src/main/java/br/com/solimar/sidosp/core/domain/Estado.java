@@ -20,8 +20,23 @@ public class Estado implements Serializable {
 	private String nome;
 	private String sigla;
 	
+	
+	
 	@OneToMany(mappedBy="estado")
 	private List<Doacao> doacoes;
+	
+	
+	
+	
+
+	public Estado() {
+		
+	}
+
+	public Estado(String nome, String sigla) {
+		this.nome = nome;
+		this.sigla = sigla;
+	}
 
 	public Long getId() {
 		return id;

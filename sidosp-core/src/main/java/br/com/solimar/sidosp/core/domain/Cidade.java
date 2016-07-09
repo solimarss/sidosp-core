@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -19,8 +20,28 @@ public class Cidade implements Serializable {
 
 	private String nome;
 	
+	@ManyToOne
+	private Estado estado;
+	
 	@OneToMany(mappedBy="cidade")
 	private List<Doacao> doacoes;
+	
+	
+	public Cidade() {
+	}
+	
+	
+
+	public Cidade(Long id) {
+		this.id = id;
+	}
+
+
+
+	public Cidade(String nome, Estado estado) {
+		this.nome = nome;
+		this.estado = estado;
+	}
 
 	public Long getId() {
 		return id;

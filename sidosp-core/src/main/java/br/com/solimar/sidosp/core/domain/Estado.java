@@ -25,13 +25,20 @@ public class Estado implements Serializable {
 	@OneToMany(mappedBy="estado")
 	private List<Doacao> doacoes;
 	
-	
+	@OneToMany(mappedBy="estado")
+	private List<Cidade> cidades;
 	
 	
 
 	public Estado() {
 		
 	}
+
+	
+	public Estado(Long id) {
+		this.id = id;
+	}
+
 
 	public Estado(String nome, String sigla) {
 		this.nome = nome;

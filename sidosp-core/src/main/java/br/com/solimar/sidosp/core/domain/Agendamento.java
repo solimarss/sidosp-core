@@ -47,6 +47,9 @@ public class Agendamento implements Serializable {
 	}
 
 	public Doador getDoador() {
+		if(doador == null){
+			doador = new Doador();
+		}
 		return doador;
 	}
 
@@ -55,6 +58,9 @@ public class Agendamento implements Serializable {
 	}
 
 	public Cidade getCidade() {
+		if(cidade == null){
+			cidade = new Cidade();
+		}
 		return cidade;
 	}
 
@@ -63,6 +69,9 @@ public class Agendamento implements Serializable {
 	}
 
 	public Estado getEstado() {
+		if(estado == null){
+			estado = new Estado();
+		}
 		return estado;
 	}
 
@@ -71,6 +80,9 @@ public class Agendamento implements Serializable {
 	}
 
 	public Laboratorio getLaboratorio() {
+		if(laboratorio == null){
+			laboratorio = new Laboratorio();
+		}
 		return laboratorio;
 	}
 

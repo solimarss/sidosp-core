@@ -26,6 +26,9 @@ public class Cidade implements Serializable {
 	@OneToMany(mappedBy="cidade")
 	private List<Doacao> doacoes;
 	
+	@OneToMany(mappedBy="cidade")
+	private List<Laboratorio> laboratorios;
+	
 	
 	public Cidade() {
 	}

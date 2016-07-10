@@ -12,7 +12,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-public class Doacao implements Serializable {
+public class Agendamento implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

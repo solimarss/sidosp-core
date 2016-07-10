@@ -23,7 +23,7 @@ public class Estado implements Serializable {
 	
 	
 	@OneToMany(mappedBy="estado")
-	private List<Doacao> doacoes;
+	private List<Agendamento> agendamentos;
 	
 	@OneToMany(mappedBy="estado")
 	private List<Cidade> cidades;
@@ -69,12 +69,26 @@ public class Estado implements Serializable {
 		this.sigla = sigla;
 	}
 
-	public List<Doacao> getDoacoes() {
-		return doacoes;
+
+	public List<Agendamento> getAgendamentos() {
+		return agendamentos;
 	}
 
-	public void setDoacoes(List<Doacao> doacoes) {
-		this.doacoes = doacoes;
+
+	public void setAgendamentos(List<Agendamento> agendamentos) {
+		this.agendamentos = agendamentos;
 	}
+
+
+	public List<Cidade> getCidades() {
+		return cidades;
+	}
+
+
+	public void setCidades(List<Cidade> cidades) {
+		this.cidades = cidades;
+	}
+
+	
 
 }

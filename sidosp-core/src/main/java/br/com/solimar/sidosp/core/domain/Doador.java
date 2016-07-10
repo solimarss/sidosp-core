@@ -29,7 +29,7 @@ public class Doador implements Serializable{
 	private String password;
 	
 	@OneToMany(mappedBy="doador")
-	private List<Doacao> doacoes;
+	private List<Agendamento> agendamentos;
 	
 
 	public Long getId() {
@@ -64,13 +64,15 @@ public class Doador implements Serializable{
 		this.password = password;
 	}
 
-	public List<Doacao> getDoacoes() {
-		return doacoes;
+	public List<Agendamento> getAgendamentos() {
+		return agendamentos;
 	}
 
-	public void setDoacoes(List<Doacao> doacoes) {
-		this.doacoes = doacoes;
+	public void setAgendamentos(List<Agendamento> agendamentos) {
+		this.agendamentos = agendamentos;
 	}
+
+	
 
 	
 }

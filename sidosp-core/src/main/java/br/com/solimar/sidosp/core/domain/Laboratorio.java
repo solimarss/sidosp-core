@@ -28,6 +28,15 @@ public class Laboratorio implements Serializable{
 	@OneToMany(mappedBy="laboratorio")
 	private List<Agendamento> agendamentos;
 
+	
+	
+	public Laboratorio() {
+	}
+
+	public Laboratorio(Long id) {
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}

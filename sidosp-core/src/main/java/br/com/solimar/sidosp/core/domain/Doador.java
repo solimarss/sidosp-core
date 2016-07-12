@@ -32,6 +32,15 @@ public class Doador implements Serializable{
 	private List<Agendamento> agendamentos;
 	
 
+	
+	public Doador() {
+	
+	}
+
+	public Doador(Long id) {
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}

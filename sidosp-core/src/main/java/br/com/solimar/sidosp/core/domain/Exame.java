@@ -25,7 +25,7 @@ public class Exame implements Serializable {
 	private Long codigo;
 	
 	@Column
-	private Long nome;
+	private String nome;
 
 	public Long getId() {
 		return id;
@@ -51,13 +51,14 @@ public class Exame implements Serializable {
 		this.codigo = codigo;
 	}
 
-	public Long getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(Long nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	
 
 	
